@@ -1,4 +1,6 @@
+import Navbar from '@/components/shared/Navbar'
 import './globals.css'
+import Footer from '@/components/shared/Footer'
 
 export const metadata = {
   title: 'NextJS App Router',
@@ -8,9 +10,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <header>Header</header>
-      <body>{children}</body>
-      <footer>Footer</footer>
+      <body>
+        <Navbar></Navbar>
+        <div className='min-h-screen'>
+          {children}
+        </div>
+        <Footer></Footer>
+      </body>
     </html>
   )
 }
